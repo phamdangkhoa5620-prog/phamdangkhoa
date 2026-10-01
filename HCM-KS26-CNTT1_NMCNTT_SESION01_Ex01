@@ -1,0 +1,17 @@
+PHẦN 1: PHÂN TÍCH LỖI
+1. Các nhận định sai:
+Sai 1: "Gói mạng 100 Mbps tương đương 100 MB/s."
+Sai 2: "Nhà mạng chỉ cung cấp 12.5% tốc độ cam kết."
+Sai 3: "Tải tệp 1 GB với mạng 40 Mbps mất khoảng 25 giây."
+2. Nguyên nhân:
+Lỗi 1: Nhầm lẫn giữa Mbps (Megabit/giây - đo băng thông) và MB/s (Megabyte/giây - đo tốc độ tải). Thực tế 1Byte=8Bits, nên 100Mbps=1008=12,5MB/s.
+Lỗi 2: Do quy đổi sai ở lỗi 1. Tốc độ 12,5MB/s chính là 100 % (100 Mbps) tốc độ cam kết.
+Lỗi 3: Nhầm 1GB=1000Mb thay vì đổi sang Bit. Thực tế 1GB=1024MB=8192Mb.
+PHẦN 2: HOÀN THIỆN BÀI
+3. Sửa lại lời giải đúng:
+Đổi gói mạng: 100Mbps=100/8=12,5MB/s.
+So sánh: Trình duyệt đạt 12,5MB/s đúng bằng tối đa 100Mbps của nhà mạng (100 % tốc độ cam kết).
+Thời gian tải tệp 1GB khi mạng giảm xuống 40Mbps (5MB/s):
+Theo chuẩn 1000: 1GB=1000MBT=1000/5=200giây.
+Theo chuẩn 1024: 1GB=1024MBT=1024/5=204,8giây.
+4. Kết luận: Nam KHÔNG nên khiếu nại vì nhà mạng đã cung cấp đúng 100 % tốc độ cam kết.
