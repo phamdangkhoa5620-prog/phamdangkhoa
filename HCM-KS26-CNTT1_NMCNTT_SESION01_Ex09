@@ -1,12 +1,12 @@
 BÁO CÁO TÓM TẮT TÍNH NĂNG POD (FASTSHIP)
 1. Phân tích IPO
-Input: 2 ảnh chụp bằng chứng giao hàng + Mã đơn, GPS, thời gian.
+Input: 2 ảnh chụp giao hàng + Mã đơn, GPS, thời gian.
 Process: Kiểm tra file → Nén ảnh tự động → Thêm watermark → Lưu server & lưu URL vào database.
-Output: Thông báo thành công trên app; hiển thị ảnh cho khách hàng & hệ thống.
+Output: thông báo , hiển thị trên app 
 2. Giải pháp xử lý bẫy dữ liệu (Ảnh >5 MB)
-Nén tại Client (App Shipper): Tự động resize/nén ảnh xuống dưới 2 MB trước khi gửi.
-Giới hạn Camera: Khóa độ phân giải chụp trong app ở mức tiêu chuẩn (Full HD).
-Xử lý Server: Lọc file >5 MB để tự nén lại thay vì từ chối lưu trữ.
+Nén ảnh (App Shipper): Tự động nén ảnh xuống dưới 2 mb.
+chỉnh độ phân giải chụp ảnh. 
+tải app quản lí ảnh để chỉnh hoặc xóa các ảnh chiếm nhiều dung lượng
 3. Tính toán dung lượng (1 tháng = 30 ngày)
 50.000*2*3*30=9.000.000MB
 xắp xĩ 8,58TB (9.000.000/1024^2)
