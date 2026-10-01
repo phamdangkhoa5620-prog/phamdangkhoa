@@ -1,4 +1,4 @@
-BÁO CÁO TÓM TẮT TÍNH NĂNG POD (FASTSHIP)
+Báo cáo tinhs năng 
 1. Phân tích IPO
 Input: 2 ảnh chụp giao hàng + Mã đơn, GPS, thời gian.
 Process: Kiểm tra file → Nén ảnh tự động → Thêm watermark → Lưu server & lưu URL vào database.
