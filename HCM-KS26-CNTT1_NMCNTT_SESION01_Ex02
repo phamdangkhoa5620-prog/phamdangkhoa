@@ -1,0 +1,16 @@
+PHẦN 1: PHÂN TÍCH LỖI
+1. Các nhận định sai:
+Sai 1: "100 Mbps tương đương 100 MB/s."
+Sai 2: "Trình duyệt hiển thị 12.5 MB/s tức nhà mạng chỉ cung cấp 12.5% tốc độ."
+Sai 3: "Mạng 40 Mbps tải tệp 1 GB mất 25 giây."
+2. Nguyên nhân:
+Lỗi 1: Nhầm đơn vị băng thông (Mbps) và tốc độ tải thực tế (MB/s). Vì 1 Byte=8 Bits nên 100 Mbps=8100​=12,5 MB/s.
+Lỗi 2: Do quy đổi sai tốc độ 12,5 MB/s đạt đúng 100% cam kết.
+Lỗi 3: Chia trực tiếp 1 GB/40 Mbps mà không quy đổi đơn vị đúng (1 GB=8000 Mb hoặc 8192 Mb).
+PHẦN 2: HOÀN THIỆN BÀI
+3. Lời giải đúng:
+Quy đổi tốc độ cước: 8100 Mbps​=12,5 MB/s. Mạng đạt đúng 100% tốc độ cam kết.
+Khi mạng giảm còn 40 Mbps (840​=5 MB/s):
+Theo chuẩn 1000: T=5 MB/s1000 MB​=200 giây
+Theo chuẩn 1024: T=5 MB/s1024 MB​=204,8 giây
+4. Kết luận: Nam KHÔNG NÊN khiếu nại vì nhà mạng đã cung cấp đúng 100% tốc độ cam kết.
