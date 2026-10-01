@@ -1,10 +1,10 @@
-PHẦN 1: PHÂN TÍCH LỖI SAI
+PHÂN TÍCH LỖI SAI
 Lưu vào C:\Windows\System32:
-Sai: System32 chứa file hệ thống, bị giới hạn quyền truy cậpRủi ro: Khi lỗi Windows phải cài lại (ổ C:), bài tập bị xóa vĩnh viễn.
+Sai: System32 chứa file hệ thống, bị giới hạn quyền truy cập rủi ro: Khi lỗi Windows phải cài lại (ổ C:), bài tập bị xóa vĩnh viễn.
 Đặt tên thư mục có khoảng trắng (nhap mon CNTT):
 Lỗi Terminal: Khi chạy lệnh python nhap mon CNTT/session 02/bai1.py, Terminal sẽ tách khoảng trắng thành nhiều tham số riêng biệt  Gây lỗi FileNotFoundError.
-Vi phạm quy chuẩn đặt tên: Chứa khoảng trắng, viết hoa bừa bãi, không theo chuẩn kebab-case hay snake_case.
-PHẦN 2: SƠ ĐỒ CÂY THƯ MỤC CHUẨN
+Vi phạm quy chuẩn đặt tên: Chứa khoảng trắng, không theo chuẩn kebab-case hay snake_case.
+SƠ ĐỒ CÂY THƯ MỤC CHUẨN
 Giải pháp: Chuyển sang ổ D:\, viết thường không dấu, phân cách bằng -.
 Plaintext
 D:\
@@ -12,6 +12,6 @@ D:\
     └── ky-01/
         └── mon-it101/
             └── session-02/
-                └── bai1.py
+                └──bai1.py
 
 Đường dẫn chuẩn: D:\hoc-tap-ptit\ky-01\mon-it101\session-02\bai1.py
