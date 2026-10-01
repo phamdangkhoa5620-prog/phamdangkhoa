@@ -1,0 +1,31 @@
+PHẦN 1: PHÂN TÍCH VẤN ĐỀ
+1. Các điểm sai trong phân loại hiện tại:
+Data sai: Đưa "Khách hàng A vắng mặt buổi sáng" vào Data (đây là quy luật hành vi  Knowledge).
+Information sai: Đưa "1205, 50000, 0912345678" vào Information (đây là chuỗi ký tự thô  Data).
+Knowledge sai: Đưa "Đề xuất giao hàng buổi chiều" vào Knowledge (đây là giải pháp/hành động  Wisdom).
+Wisdom sai: Đưa "Bảng thống kê đơn trễ" vào Wisdom (đây là dữ liệu đã gom nhóm  Information).
+2. Định nghĩa đúng:
+Data (Dữ liệu): Các ký tự, con số thô chưa xử lý, chưa có ngữ cảnh.
+Information (Thông tin): Dữ liệu đã được gom nhóm, gắn ngữ cảnh để có ý nghĩa (Ai, Cái gì, Khi nào).
+Knowledge (Tri thức): Việc kết nối các thông tin để hiểu bản chất, xu hướng, quy luật (Tại sao, Như thế nào).
+Wisdom (Sự thông thái): Vận dụng tri thức để đưa ra quyết định, đề xuất hành động tối ưu (Nên làm gì).
+
+PHẦN 2: HOÀN THIỆN BÀI
+3. Sắp xếp lại 4 mệnh đề vào đúng các tầng của tháp DIKW:
+Tầng DIKW
+Nội dung chuẩn xác
+Giải thích lý do
+Data (Dữ liệu)
+1205, 50000, 0912345678
+Là các con số/chuỗi ký tự thô, chưa gắn ý nghĩa hay ngữ cảnh cụ thể.
+Information (Thông tin)
+Bảng thống kê số đơn giao trễ trong tháng
+Dữ liệu đã được gom nhóm, tổng hợp thành bảng để cung cấp bức tranh thực trạng giao hàng.
+Knowledge (Tri thức)
+“Khách hàng A thường xuyên vắng nhà vào buổi sáng”
+Đã phân tích các thông tin giao hàng nhiều lần để rút ra thói quen/quy luật của khách hàng.
+Wisdom (Sự thông thái)
+“Đề xuất giao hàng cho khách A vào buổi chiều để tăng tỷ lệ thành công”
+Đưa ra hành động/giải pháp chiến lược dựa trên tri thức nhằm tối ưu hóa tỷ lệ giao hàng.
+
+
