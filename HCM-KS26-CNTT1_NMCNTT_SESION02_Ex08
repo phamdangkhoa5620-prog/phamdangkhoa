@@ -1,0 +1,5 @@
+Phần 1: Phân tích 2 nguyên nhân lỗi
+1 đường dẫn tuyệt đối vào máy tính cá nhân của lập trình viên nên khi đưa lên sẽ không truy cập vào ổ C của máy bạn được
+2 do code .JPG nhưng các hệ điều hành như LINUX phân biệt viết hoa và thường nên xem là 2 file khác nhau
+Phần 2: Sửa lại đường dẫn chuẩn (Relative Path)
+<img src="./images/poster.jpg" alt="Poster phim CineBook">
