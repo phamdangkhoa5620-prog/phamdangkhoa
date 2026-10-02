@@ -1,0 +1,27 @@
+1. Phân tích cấu trúc cây thư mục (File System Tree)
+Plaintext
+cinebook-backend/
+|-- src/
+|   |-- controllers/
+|   |-- models/
+|   |-- routes/
+|   |-- utils/
+|   |-- app.js
+|-- uploads/
+|   |-- posters/
+|   |-- avatars/
+|    |....
+|-- docs/
+|-- .env
+|-- .env.example
+|-- .gitignore
+|-- README.md
+|-- requirement.txt
+3. Giải pháp file mật khẩu & File ẩn
+   Đặt tên file mật khẩu cấu hình là .env (bắt đầu bằng dấu chấm ".").
+   Bẫy dữ liệu: Thêm .env vào .gitignore để không bị rò rỉ khi push code.
+4. Vai trò các thư mục
+src/: Lưu toàn bộ mã nguồn xử lý logic dự án.
+uploads/: Lưu hình ảnh người dùng tải lên, tách biệt hoàn toàn khỏi code chính để dễ quản lý.
+.env: Lưu biến môi trường và thông tin bảo mật (mật khẩu DB, secret key).
+docs/: Thư mục chứa tài liệu hướng dẫn kỹ thuật và mô tả API của dự án.
