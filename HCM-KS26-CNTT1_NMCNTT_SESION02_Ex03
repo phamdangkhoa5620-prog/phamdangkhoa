@@ -1,0 +1,17 @@
+giải thích nguyên nhân giật lag
+Quản lý tiến trình: Chuyển đổi ngữ cảnh (Context Switching) quá nhiều do vô số tiến trình con.
+Quản lý bộ nhớ: Nghẽn băng thông đọc/ghi ổ đĩa khi Kernel liên tục tráo đổi dữ liệu qua lại giữa RAM và ổ đĩa.
+Mô hình Ban quản lý tòa nhà
+Hardware: Cơ sở vật chất tòa nhà (diện tích mặt bằng = RAM).
+Kernel: Ban quản lý tòa nhà (nắm toàn quyền điều hành, phân chia không gian).
+Shell / GUI: Lễ tân / Bảng thông báo (tiếp nhận yêu cầu từ người dùng).
+Ứng dụng: Các công ty thuê văn phòng.
+Hiện tượng Memory 95%: Tòa nhà gần như chật kín chỗ.
+Ban quản lý (Kernel) buộc phải chuyển bớt tài liệu tạm thời xuống Kho chứa đồ dưới hầm, gây di chuyển liên tục dẫn đến giật lag.
+Luồng nạp ứng dụng (Mô hình IPO)
+Input: Người dùng nhấp đúp mở Chrome (Shell nhận tín hiệu).
+Process: Kernel tìm chrome.exe trên Storage, nạp dữ liệu vào RAM (Memory Management) và tạo tiến trình mới (Process Management).
+Output: Giao diện Chrome xuất hiện.
+- Architecture Layers (sơ đồ phân tầng ) 
+[ USER ] ──(Click Chrome)──> [ SHELL/GUI ] ──(System Call)──> [ KERNEL ] ──(Đọc/Ghi dữ liệu)──> [ HARDWARE ]
+                                                             (Process & Memory)               (CPU, RAM, Storage)
