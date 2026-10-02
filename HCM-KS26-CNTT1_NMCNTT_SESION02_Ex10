@@ -1,0 +1,20 @@
+1. Phân tích & Đề xuất 2 giải pháp
+Vấn đề: Windows dùng \ để phân cách thư mục, Linux dùng /. Hard-code \ sẽ gây lỗi không tìm thấy file khi sang Linux.
+Giải pháp 1 (Sửa thủ công): Đổi toàn bộ \ thành / trong code.
+Giải pháp 2 (Dùng thư viện động): Dùng pathlib / os.path (Python) hoặc path (Node.js) để hệ thống tự động chèn dấu / hay \ tùy theo OS đang chạy.
+2. Bảng so sánh Ưu - Nhược điểm
+Tiêu chí
+Giải pháp 1: Đổi \ thành /
+Giải pháp 2: Dùng thư viện động (pathlib/os.path)
+Ưu điểm	Sửa nhanh, đơn giản.	Đa nền tảng tuyệt đối, chạy tốt trên cả Windows/Linux/macOS, tránh lỗi escape character (\n, \t).
+Nhược điểm	Rủi ro cao, dễ đổi nhầm/bỏ sót khi dự án lớn.
+Dự án lớn	Rủi ro rất lớn, tốn nhiều công sức kiểm thử.	Tối ưu nhất, tự động hóa và chuẩn hóa theo tiêu chuẩn lập trình.
+4. Lựa chọn giải pháp tối ưu
+Chọn: Giải pháp 2 (Dùng thư viện động).
+Lý do: Đảm bảo tính linh hoạt (chạy tốt cả máy Dev Windows và Server Linux), dễ bảo trì và an toàn tuyệt đối cho dự án lâu dài.
+4. Các bước triển khai
+Rà soát: Dùng tính năng Search trong IDE để tìm toàn bộ đường dẫn hard-code chứa \.
+Tạo biến gốc: Khai báo đường dẫn gốc dự án BASE_DIR bằng thư viện đường dẫn.
+Refactor code: Thay các chuỗi đường dẫn cứng thành cú pháp thư viện (ví dụ: BASE_DIR / "uploads" / "poster.jpg").
+Kiểm thử Linux: Deploy lên server thử nghiệm Ubuntu để kiểm tra đọc/ghi file.
+Nghiệm thu: Chạy kiểm thử toàn bộ hệ thống và đưa lên Server Production chính thức.
