@@ -1,0 +1,26 @@
+Phần 1:lỗi sai của từng tên file
+Poster Phim Hài.jpg
+Chứa khoảng trắng giữa các từ.
+Tiếng Việt có dấu:Chứa chữ "hài".
+Viết hoa chữ cái đầu từng từ (Poster Phim Hài), không theo chuẩn dành cho file media/web.
+Avengers_end_game_final_2.PNG
+Trộn lẫn chữ hoa (Avengers) và chữ thường (end_game_final_2).
+Phần mở rộng (Extension): Đuôi file viết hoa toàn bộ (.PNG), chuẩn tốt nhất nên viết thường (.png).
+LậtMặt6-Bảnchuẩn.jpeg
+Có dấu: Chứa các ký tự ật, ặt, ả, ẩ.
+Dùng kết hợp cả kiểu viết PascalCase (LậtMặt) và gạch nối (-Bảnchuẩn).
+icon tài khoản.SVG
+Khoảng trắng giữa các từ.
+Có dấu:à, ỏ.
+Đuôi file viết hoa toàn bộ (.SVG), nên đổi thành chữ thường (.svg).
+Phần 2: Sửa lại tên file chuẩn Developer
+1. Áp dụng chuẩn kebab-case (Khuyên dùng cho tài nguyên Web)
+poster-phim-hai.jpg
+avengers-end-game-final-2.png
+lat-mat-6-ban-chuan.jpeg
+icon-tai-khoan.svg
+2. Áp dụng chuẩn snake_case
+poster_phim_hai.jpg
+avengers_end_game_final_2.png
+lat_mat_6_ban_chuan.jpeg
+icon_tai_khoan.svg
