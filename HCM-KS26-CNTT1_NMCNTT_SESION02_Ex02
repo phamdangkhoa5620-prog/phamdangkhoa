@@ -2,5 +2,5 @@ Phần 1: Phân tích nguyên nhân
 Lỗi đứt gãy đường dẫn:Đường dẫn tuyệt đối cố định theo ổ đĩa C:\Users\Binh-K26\.... Sang máy thầy cô, tên tài khoản khác (Binh-K26) hoặc lưu bài ở vị trí/ổ đĩa khác nên máy không tìm thấy file.
 Lỗi ký tự thoát: Dấu gạch ngược \ trong Python dễ bị hiểu nhầm thành ký tự đặc biệt (như \n, \t).
 Phần 2: Sửa lỗi (Relative Path)
-Đường dẫn tương đối
+Đường dẫn tương đối:
 image_path = "./assets/logo.png"
