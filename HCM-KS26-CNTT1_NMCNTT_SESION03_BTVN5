@@ -1,0 +1,13 @@
+Phần 1: Phân tích và So sánh
+So sánh đường dẫn:
+Absolute Path: Chỉ từ ổ đĩa gốc (C:\Users\...), cố định, dễ đứt gãy khi đổi máy.
+Relative Path: Chỉ từ thư mục hiện tại (./data/...), linh hoạt, chuẩn cho dự án.
+Thời gian tải file (2GB với gói 80 Mbps):
+Tốc độ tải: 80 Mbps=10 MB/s.
+Dung lượng: 2 GB=2048 MB.
+Thời gian: 2048​/10=204.8 giây (~3 phút 25 giây).
+Phần 2: Hành động
+Viết lại Relative Path: ./data/db.csv (hoặc data/db.csv).
+Bật View chống mã độc:
+Mở File Explorer → chọn tab View → chọn Show → tích chọn File name extensions.
+Kết quả: Lộ đuôi thực sự là tai-lieu-on-tap.pdf.exe (mã độc dạng .exe).
