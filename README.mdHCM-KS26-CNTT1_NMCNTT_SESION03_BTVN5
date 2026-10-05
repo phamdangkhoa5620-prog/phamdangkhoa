@@ -1,0 +1,18 @@
+1. Luồng kiến trúc DIKW & Module IPO (MoMo-Lite)
+Tầng DIKW
+Nội dung                                         Input                       Process                         Output
+Data
+Lịch sử giao dịch thô (số tiền, thời gian)       QR code / Cổng thanh toán   Ghi nhận & Lưu cơ sở dữ liệu    Log giao dịch thô
+Information
+Báo cáo chi tiêu theo tháng                      Dữ liệu giao dịch thô       Gom nhóm & Tính tổng            Dashboard / Báo cáo chi tiêu
+Knowledge
+Cảnh báo khi vượt hạn mức chi tiêu               Báo cáo chi tiêu + Hạn mức  So sánh chi tiêu với hạn mức    Thông báo cảnh báo vượt ngưỡng  
+Wisdom
+Gợi ý kế hoạch tiết kiệm cá nhân hóa             Thu nhập & Lịch sử chi tiêu Thu nhập & Lịch sử chi tiêu     Kế hoạch/mẹo tiết kiệm
+2. Xử lý Bẫy dữ liệu
+Bẫy 1 (Quản lý file .env):
+Bật file ẩn: Trong File Explorer chọn View → Show → tích Hidden items (hoặc dùng ls -a trong Terminal).
+Bảo mật: Thêm .env vào .gitignore để tránh lộ API Keys.
+Bẫy 2 (Tính dung lượng lưu trữ/ngày):
+Dung lượng = 1.000.000×1 KB=1.000.000 KB.
+Quy đổi: 10241.000.000​≈976.56 MB/ngaˋy (hoặc 1000 MB/ngaˋy theo chuẩn thập phân).
