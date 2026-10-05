@@ -1,0 +1,17 @@
+Sai lầm của Nam
+1 đặt tên tệp chứa khoảng chắn 
+2 lưu ở ổ C
+3 không quy đổi đúng chuẩn đơn vị băng thông
+giải thích 256GB
+vì do phép quy đổi không lấy ( ví dụ : họ sẽ làm tròn 1GB=1000MB nhưng trên thực tế là 1GB=1024MB )
+Cây thư mục
+D:/
+ |_cntt101/
+     | _session1/
+          | _ baitap1.exe
+     | _session2/
+          | _ baitap1.docs
+          | _ baitap2.docs
+          | _ baitap5.docs
+     | _ session3
+          | _ baitaptonghop.docs
