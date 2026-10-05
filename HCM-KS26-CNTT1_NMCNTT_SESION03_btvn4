@@ -1,0 +1,26 @@
+Phần 1: Phân tích lag & Mô hình IPO
+RAM Mở 20 tab Chrome +  Code làm cạn kiệt 8GB RAM.
+Bẫy Swap File (Virtual Memory): RAM đầy buộc Windows lấy ổ cứng SSD làm RAM ảo. Tốc độ ghi/đọc của SSD chậm hơn RAM hàng chục lần, dẫn đến giật lag .
+CPU tốn tài nguyên điều phối dữ liệu qua lại giữa RAM và SSD.
+Vai trò RAM vs Storage trong mô hình IPO:
+Storage (SSD - Ngăn tủ): Lưu trữ dữ liệu lâu dài (256GB), dung lượng lớn nhưng tốc độ đọc/ghi chậm.
+RAM (Bàn làm việc): Nơi chứa dữ liệu tạm thời để CPU xử lý trực tiếp (8GB), tốc độ cực nhanh nhưng diện tích có hạn và mất dữ liệu khi tắt máy.
+Phần 2: Thiết kế lại hệ thống lưu trữ trên Ổ D:
+Xử lý bẫy vị trí lưu trữ:
+Thư mục C:\Windows\System32 chứa file hệ thống, nguy cơ bị xóa nhầm hoặc mất dữ liệu khi cài lại Win.
+Tên thư mục chứa dấu/khoảng trắng (Code của tôi) dễ gây lỗi khi chạy terminal/script.
+Sơ đồ Cây thư mục (Kebab-case & 4 trụ cột):
+D:\
+└── ptit-academic-workspace/        
+    ├── 01-projects/                 
+    │   └── python-first-project/   
+    │       ├── src/                 
+    │       ├── docs/             
+    │       |── data/         
+    │  
+    ├── 02-learning-resources/      
+    │   └── python-programming/
+    ├── 03-assignments/             
+    │   └── session-03/
+    └── 04-archives/              
+
