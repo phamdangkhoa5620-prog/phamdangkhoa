@@ -1,0 +1,16 @@
+Nguyên nhân gây lỗi
+cấu trúc thư mục trên mỗi máy là khác nhau do đó khi chuyển qua máy của bạn sẽ báo lỗi
+Luồng IPO
+input: khi chạy python toàn bộ tài nguyên được lưu từ storagesex được nạp vào Ram
+process: 
+CPU lấy mã từ RAM để xữ lí thuật toán của ứng dụng shoope-lite (xử lý dữ liệu sản phẩm, render giao diện, giải mã hình ảnh...).
+RAM là không gian làm việc tạm thời với tốc độ truy xuất cực nhanh, lưu trữ mã chương trình và các biến/hình ảnh đã nạp.
+output:
+sản phẩm đầu ra là giao diện màn hình kết quả đơn hàng , logo , các tương tác của người dùng và ứng dụng
+cấu trúc đường dẫn tương đối:
+logo_path= "./acsets/logo.png"( truy cập thư mục gốc )
+logo_path+"../acsets/logo.png" ( truy cập thư mục cha )
+giải pháp giảm lag
+1 tắt bớt tab trên task manager
+2 tối ưu mã nguồn cho python
+3 giải phóng dung lượng cho ram trách vào vòng lặp vô hạn
