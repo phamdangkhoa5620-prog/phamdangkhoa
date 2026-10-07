@@ -1,0 +1,15 @@
+Phần 1 : Phân tích
+1 kiểm tra mục hiện tại bằng mã pwd
+2 để liệt cáu file trong mục dùng lệnh ls
+3 Giải thích nguyên nhân & cơ chế bảo mật của PowerShell
+Nguyên nhân báo lỗi: File deploy.ps1 thực tế đang nằm ở thư mục Downloads\Project chứ không phải Desktop. Do đứng sai thư mục nên gọi lệnh .\deploy.ps1 bị báo lỗi không tìm thấy đường dẫn.
+Cơ chế bảo mật của PowerShell:
+Bắt buộc dùng .\: Để tránh việc vô tình chạy nhầm các file mã độc trùng tên với lệnh hệ thống, PowerShell bắt buộc người dùng phải thêm tiền tố .\ (chỉ rõ vị trí thư mục hiện tại) thì mới cho phép chạy file script .ps1.
+Đúng vị trí: Nếu không đứng đúng thư mục chứa file, PowerShell không thể định vị và thực thi script.
+Phần 2 : Sữa lỗi
+# Bước 1: Di chuyển từ Desktop sang đúng thư mục chứa file
+cd ..\Downloads\Project
+# Bước 2: Kiểm tra xác nhận file deploy.ps1 có tồn tại trong thư mục hay không
+Test-Path .\deploy.ps1
+# Bước 3: Chạy file script thành công
+.\deploy.ps1
