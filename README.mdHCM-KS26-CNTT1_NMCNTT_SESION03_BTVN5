@@ -1,18 +1,11 @@
-1. Luồng kiến trúc DIKW & Module IPO (MoMo-Lite)
-Tầng DIKW
-Nội dung                                         Input                       Process                         Output
-Data
-Lịch sử giao dịch thô (số tiền, thời gian)       QR code / Cổng thanh toán   Ghi nhận & Lưu cơ sở dữ liệu    Log giao dịch thô
-Information
-Báo cáo chi tiêu theo tháng                      Dữ liệu giao dịch thô       Gom nhóm & Tính tổng            Dashboard / Báo cáo chi tiêu
-Knowledge
-Cảnh báo khi vượt hạn mức chi tiêu               Báo cáo chi tiêu + Hạn mức  So sánh chi tiêu với hạn mức    Thông báo cảnh báo vượt ngưỡng  
-Wisdom
-Gợi ý kế hoạch tiết kiệm cá nhân hóa             Thu nhập & Lịch sử chi tiêu Thu nhập & Lịch sử chi tiêu     Kế hoạch/mẹo tiết kiệm
-2. Xử lý Bẫy dữ liệu
-Bẫy 1 (Quản lý file .env):
-Bật file ẩn: Trong File Explorer chọn View → Show → tích Hidden items (hoặc dùng ls -a trong Terminal).
-Bảo mật: Thêm .env vào .gitignore để tránh lộ API Keys.
-Bẫy 2 (Tính dung lượng lưu trữ/ngày):
-Dung lượng = 1.000.000×1 KB=1.000.000 KB.
-Quy đổi: 10241.000.000​≈976.56 MB/ngaˋy (hoặc 1000 MB/ngaˋy theo chuẩn thập phân).
+Phần 1 : Phân tích lỗi
+1 có khoảng trắng Powershell sẽ không hiểu và sẽ tạo ra 2 thư mục khác nhau và không để trong "..."
+2 thư mục không tồn tại mà dùng lệch cd vào mục đó
+3 copy thư mục mà chưa có nguồn
+Phần 2 : Hoàn thiện
+# Dòng 1: Tạo thư mục dự án "Shopee Projects" và đi vào bên trong thư mục đó
+New-Item -ItemType Directory -Path "Shopee Projects"; cd "Shopee Projects"
+# Dòng 2: Tạo thẳng cây thư mục con "src\assets\images" (thêm -Force để tự tạo cả các thư mục cha)
+New-Item -ItemType Directory -Path "src\assets\images" -Force
+# Dòng 3: Sao chép toàn bộ thư mục "src" sang thư mục "src-backup" (-Recurse nghĩa là copy cả thư mục con bên trong)
+Copy-Item -Path "src" -Destination "src-backup" -Recurse
