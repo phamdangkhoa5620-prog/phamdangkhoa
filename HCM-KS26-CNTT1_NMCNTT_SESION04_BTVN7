@@ -1,0 +1,4 @@
+Phần 1: Phân tích vấn đề
+trong Powershell trong nhận diện khoảng trống nên . Khi gõ cd Menu Thang 9, hệ thống hiểu Menu là thư mục đích, còn Thang và 9 là tham số thừa. Hệ thống không tìm thấy thư mục tên Menu nên báo lỗi Cannot find path
+Phần 2 Hoàn thành
+cd "Menu Thang 9"
