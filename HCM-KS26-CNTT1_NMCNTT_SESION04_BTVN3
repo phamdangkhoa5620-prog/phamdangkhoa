@@ -1,0 +1,10 @@
+Phần 1 : Mã nguồn
+# 1. Tạo cây thư mục
+New-Item -ItemType Directory -Path ".\Farm-Manager\code\app", ".\Farm-Manager\database\db", ".\Farm-Manager\logs\guides" -Force
+# 2. Tạo 3 file rỗng trong thư mục app
+New-Item -ItemType File -Path ".\Farm-Manager\code\app\main.py", ".\Farm-Manager\code\app\models.py", ".\Farm-Manager\code\app\utils.py" -Force ( -Force: Tự động tạo thư mục cha nếu chưa có và bỏ qua lỗi trùng lặp. )
+# 3. Sao chép thư mục logs sang logs-backup
+Copy-Item -Path ".\Farm-Manager\logs" -Destination ".\Farm-Manager\logs-backup" -Recurse(-Recurse: Copy đệ quy toàn bộ thư mục con (guides) và file bên trong logs.)
+Phần 2 : kiểm thử
+Lệnh kiểm tra: ls .\Farm-Manager
+Giải thích dùng .\ (Đường dẫn tương đối): Giúp câu lệnh chạy được ở bất kỳ máy tính/thư mục nào, tránh bị lỗi gắn cứng ổ đĩa C:\ khi chia sẻ mã nguồn lên GitHub.
