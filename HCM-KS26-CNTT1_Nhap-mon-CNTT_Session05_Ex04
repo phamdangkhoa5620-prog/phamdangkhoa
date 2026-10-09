@@ -1,0 +1,15 @@
+Tiêu chí                           Cách 1: Đường dẫn tuyệt đối                                                                      Cách 2: Đường dẫn tương đối
+
+                                   C:\Users\An-K26\FarmProject\data\logs.csv                                                         ../data/logs.csv
+
+Tính di động (Portability)          Kém: Chỉ chạy được trên máy của An. Sang máy người khác sẽ bị lỗi "File Not Found".              Tốt: Chạy mượt mà trên mọi máy tính khi gửi nguyên thư mục Project.
+
+Độ dài câu lệnh                     Dài & Cồng kềnh: Phải viết đầy đủ từ tên ổ đĩa đến tên thư mục người dùng.                        Ngắn gọn & Sạch: Chỉ chỉ ra vị trí file so với vị trí code đang đứng
+
+Tính an toàn                        Thấp: Dễ lộ tên tài khoản máy tính (An) và cấu trúc ổ đĩa cá nhân.                                Cao: Bảo mật thông tin hệ thống, không bị ảnh hưởng khi chuyển ổ đĩa.
+Phần 2: Lựa chọn giải pháp
+Chốt giải pháp tối ưu: Chọn Cách 2 (../data/logs.csv) - Đường dẫn tương đối.
+Lý do: Đảm bảo quy tắc nghiệp vụ giúp dự án chạy được trên máy của bất kỳ ai mà không lo lỗi sai ổ đĩa hay sai tên người dùng.
+Giải thích ý nghĩa ký hiệu:
+. (Một dấu chấm): Đại diện cho thư mục hiện tại (thư mục chứa file code src).
+.. (Hai dấu chấm): Đại diện cho thư mục cấp cha (lùi ra 1 cấp, từ src ra ngoài thư mục FarmProject).
