@@ -1,0 +1,14 @@
+1. Sơ đồ IPO
+Input: File thô trong Downloads/ (.png, .jpg, .py, .tmp, thư mục con).
+Process: Kiểm tra tạo thư mục đích → Lọc chỉ xử lý file (bỏ qua thư mục) → Phân loại theo đuôi tệp.
+Output: Di chuyển ảnh sang media/, code sang scripts/, xóa .tmp.
+2. Xử lý Edge Case ("Is a directory")
+Dùng điều kiện [ -f "$file" ] để xác nhận đối tượng là file thông thường trước khi thao tác, tránh va phải thư mục trùng tên gây lỗi.
+3. Script Bash
+mkdir -p media scripts
+# Di chuyển ảnh
+for f in Downloads/*.png Downloads/*.jpg; do [ -f "$f" ] && mv "$f" media/; done
+# Di chuyển code
+for f in Downloads/*.py; do [ -f "$f" ] && mv "$f" scripts/; done
+# Xóa file tạm
+for f in Downloads/*.tmp; do [ -f "$f" ] && rm "$f"; done
