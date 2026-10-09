@@ -1,0 +1,10 @@
+# 1. Tạo cây thư mục smart-farm\data\logs và smart-farm\code
+New-Item -ItemType Directory -Force -Path "smart-farm\data\logs", "smart-farm\code"
+# 2. Tạo 3 file config.json, sensors.py, .env trong 1 dòng lệnh
+New-Item -ItemType File -Force -Path "smart-farm\code\config.json", "smart-farm\code\sensors.py", "smart-farm\code\.env"
+# 3. Sao chép đệ quy thư mục code sang backup\code_v1
+Copy-Item -Path "smart-farm\code" -Destination "backup\code_v1" -Recurse -Force
+Sơ đồ IPO:
+Input: Tên các thư mục (smart-farm, code, data\logs, backup\code_v1) và tên các file (config.json, sensors.py, .env).
+Process: Tạo thư mục lồng nhau (New-Item -ItemType Directory -Force), tạo danh sách file (New-Item -ItemType File), sao chép đệ quy (Copy-Item -Recurse).
+Output: Hạ tầng thư mục và các file được khởi tạo, sao chép đầy đủ đúng cấu trúc trên máy chủ.
