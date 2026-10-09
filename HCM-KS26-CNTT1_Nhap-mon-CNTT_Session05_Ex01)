@@ -1,0 +1,7 @@
+Phần 1 : Phân tích 
+1 lỗi quá nhiều đối số trong PowerShell chỉ nhận 1 đối số
+2 sử dụng / (sai) thay vì \ ( đúng)
+Phần 2 : Hoàn thiện
+mkdir Smart_Farm_Project
+cd Smart_Farm_Project
+mkdir src\sensors\temperature
