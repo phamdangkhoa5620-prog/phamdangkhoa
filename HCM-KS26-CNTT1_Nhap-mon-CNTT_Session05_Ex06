@@ -1,0 +1,21 @@
+1. Câu lệnh PowerShell
+PowerShell
+# Bước 1: Tạo cấu trúc thư mục smart-farm
+New-Item -Path ~ -Name "smart-farm/bin", "smart-farm/config", "smart-farm/data" -ItemType Directory -Force
+# Bước 2: Tạo file ẩn .env trong config
+New-Item -Path ~/smart-farm/config/.env -ItemType File -Value "SENSOR_PASSWORD=Secret123" -Force
+# Bước 3: Copy và đổi tên file trong 1 lệnh
+Copy-Item -Path C:\Users\Public\template.ps1 -Destination ~/smart-farm/bin/pump_control.ps1
+# Bước 4: Kiểm tra toàn bộ cấu trúc (bao gồm file ẩn)
+Get-ChildItem -Path ~/smart-farm -Recurse -Force
+2. Trả lời các câu hỏi
+Tại sao Get-ChildItem thông thường không thấy file .env?
+Do file có tên bắt đầu bằng dấu chấm . nên hệ thống gắn thuộc tính ẩn (Hidden). Get-ChildItem mặc định lọc bỏ file ẩn, cần thêm tham số -Force hoặc -Hidden để hiển thị.
+Cách xử lý lỗi "Access to the path is denied" (Chạy quyền Admin):
+Mở PowerShell bằng Run as Administrator hoặc gõ lệnh:
+PowerShell
+Start-Process powershell -Verb RunAs
+3. Phân tích luồng IPO
+Input: Đường dẫn ~, danh sách thư mục (bin, config, data), nội dung .env, file mẫu template.ps1.
+Process: Khởi tạo thư mục (New-Item), tạo file ẩn chứa mật khẩu, sao chép & đổi tên (Copy-Item), kiểm tra đệ quy (Get-ChildItem -Recurse -Force).
+Output: Cấu trúc ~/smart-farm/ hoàn chỉnh kèm các file đúng vị trí và cây thư mục hiển thị trên màn hình.
