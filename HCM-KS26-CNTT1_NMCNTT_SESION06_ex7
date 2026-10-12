@@ -1,0 +1,21 @@
+Phần 1: Phân tích lỗi
+Nguyên nhân: Lệnh dùng tham số -CaseSensitive kết hợp pattern chữ thường "critical", trong khi file server.log ghi chữ hoa CRITICAL. Do không khớp kiểu chữ, Select-String không tìm thấy dòng nào, khiến phần nội dung lỗi bị trống.
+
+Phần 2: Sửa lỗi và kiểm thử
+Đoạn script đã sửa đúng:
+
+PowerShell
+# Script: deploy_checker.ps1 (Đã sửa)
+"=== Bat dau quet log: $(Get-Date) ===" | Out-File daily_critical.txt
+Select-String -Path server.log -Pattern "CRITICAL" | Out-File -Append daily_critical.txt
+"=== Hoan tat. So dong loi: ===" | Out-File -Append daily_critical.txt
+(Get-Content daily_critical.txt).Count | Out-File -Append daily_critical.txt
+Kết quả mong đợi của file daily_critical.txt:
+
+Plaintext
+=== Bat dau quet log: [Thời gian hiện tại] ===
+server.log:2:2026-09-18 02:30:11 CRITICAL Database connection pool exhausted
+server.log:3:2026-09-18 02:30:45 CRITICAL Retry limit exceeded for payment-service
+=== Hoan tat. So dong loi: ===
+Nếu file server.log không tồn tại ở thư mục hiện hành, câu lệnh Select-String -Path server.log sẽ phát sinh lỗi màu đỏ trực tiếp trên Terminal (thông báo không tìm thấy đường dẫn hoặc tệp tin) và quá trình thực thi script có thể bị
+gián đoạn/báo lỗi ngoại lệ thay vì chạy ngầm im lặng.
