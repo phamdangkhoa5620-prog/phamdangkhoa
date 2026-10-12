@@ -1,0 +1,7 @@
+BƯỚC 1 [Get-Content access.log] (stdout) 
+BƯỚC 2 (Dùng Pipeline | chuyển trực tiếp trên RAM)
+[Select-String "TIMEOUT"] (stdin ➔ stdout)
+BƯỚC 3 (Dùng Pipeline | chuyển tiếp)
+[Measure-Object -Line] (stdin ➔ Kết quả cuối cùng)
+Triển Khai
+Get-Content .\access.log | Select-String "TIMEOUT" | Measure-Object -Line
