@@ -1,0 +1,16 @@
+Phần 1: So sánh > vs >>
+Tiêu chuẩn                           Toán tử > (Out-File)                                Toán tử >> (Add-Content)
+                                    
+Cơ chế hoạt động                     Ghi đè hoàn toàn: Xóa sạch nội dung cũ              Ghi nối tiếp: Giữ nguyên nội dung cũ và                                                                                         
+                                     trong file và thay thế bằng dữ liệu mới.            bổ sung dòng mới vào cuối file.
+                                
+Rủi ro mất dữ liệu                   Rất cao (mất toàn bộ lịch sử trước đó               Thấp (bảo toàn toàn bộ lịch sử theo thời gian).
+                                     mỗi lần lệnh chạy).                                                   
+
+Ngữ cảnh sử dụng                     Phù hợp tạo mới báo cáo độc lập                     Bắt buộc dùng cho hệ thống giám sát, ghi log liên tục 24/7.
+                                     (ví dụ: báo cáo ca sáng cần làm mới từ đầu)
+
+Phần 2: Cảnh báo & Bối cảnh ngân hàng
+Trong hệ thống ngân hàng, file nhật ký (history.txt) là chứng cứ pháp lý và kỹ thuật tối quan trọng để kiểm toán, truy vết giao dịch và chẩn đoán sự cố.
+Gõ nhầm > thay cho >> là một thảm họa vì lệnh này sẽ xóa trắng toàn bộ lịch sử log trước đó, khiến ngân hàng mất sạch dấu vết dữ liệu bảo trì hoặc giao dịch. Điều này vi phạm nghiêm trọng tính toàn vẹn hệ thống và gây tắc nghẽn quá trình điều tra khi xảy ra lỗi hệ thống nghiêm trọng.
+                                                          
