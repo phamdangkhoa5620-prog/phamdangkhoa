@@ -1,0 +1,9 @@
+Phần 1: Phân tích
+Tại sao Notepad bị treo ("Not Responding"): Notepad tải toàn bộ tệp 800MB vào bộ nhớ RAM cùng một lúc. Khi lượng dữ liệu quá lớn làm quá tải RAM và đơ tiến trình giao diện (GUI), hệ thống sẽ bị treo cứng.
+Tại sao cat lỗi trên CMD: Lệnh cat không tồn tại trong Windows CMD truyền thống, dẫn đến lỗi command not found.
+Tại sao cat chạy được trong PowerShell: Trong PowerShell, cat chỉ là một lệnh rút gọn (Alias) trỏ đến lệnh chuẩn Get-Content.
+Phần 2: Bộ lệnh PowerShell chuẩn
+1. Xem toàn bộ nội dung tệp (Đọc theo luồng tránh tràn RAM)
+Get-Content -Path server_log_800MB.log -ReadCount 1000
+2. Chỉ xem 10 dòng cuối cùng (Kiểm tra lỗi mới nhất)
+Get-Content -Path server_log_800MB.log -Tail 10
