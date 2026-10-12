@@ -1,0 +1,4 @@
+Phần 1 : Phân tích
+vì lệnh an dùng không đọc nội dung trong file
+Phần 2 sữa lỗi 
+get-content access.log | select-string "error"
