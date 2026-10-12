@@ -1,0 +1,7 @@
+Phần 1 : Phân Tích 
+vì luồng dữ liệu quá nhiều dùng cat để chảy ra màn hình lập tức sẽ khiến máy bị đứng vì quá tải làm treo máy 
+Phần 2 : Hoàn Thiện
+2.  Xem toàn bộ file theo từng trang
+cat server_log_500MB.log | more
+Xem 10 dòng cuối cùng
+get-content sever_log_500MB.log -Tail 10
