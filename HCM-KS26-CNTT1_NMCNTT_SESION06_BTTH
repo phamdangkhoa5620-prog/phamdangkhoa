@@ -1,0 +1,30 @@
+Phần 1 – Đọc và định vị tệp tin
+Get-Content .\logs\server.log
+Notepad nạp toàn bộ file 500 MB vào RAM cùng lúc gây treo máy; PowerShell dùng cơ chế streaming (đọc từng dòng) giúp tiết kiệm RAM, chạy mượt mà.
+Get-ChildItem -Recurse -Filter "*.log"
+Phần 2 – Lọc dữ liệu và Pipe
+Get-Content .\logs\server.log | Select-String "ERROR"
+Lệnh tìm vị trí file: Get-ChildItem -Recurse -Filter "server.log"
+Lệnh tìm nội dung: Select-String "404" .\logs\server.log
+Lệnh Pipe: Get-Content .\logs\server.log | Select-String "404"
+Get-ChildItem -Recurse -Filter "*.log" | Get-Content | Select-String -NotMatch "INFO"
+Phần 3 – Toán tử chuyển hướng > và >>
+Get-Content .\logs\server.log | Select-String "404" > .\reports\daily_report.txt
+Thêm dòng lỗi mới: Get-Content .\logs\server.log | Select-String "404" >> .\reports\daily_report.txt
+Rủi ro: Dùng nhầm > sẽ xóa trắng toàn bộ dữ liệu báo cáo cũ.
+Phần 4 – Shell Script và lệnh echo
+PowerShell
+Write-Output "Dang loc log..."
+"=== LOG REPORT ===" > .\reports\daily_report.txt
+Nội dung scripts\auto_report.ps1:
+PowerShell
+# Script tu dong doc log va trich xuat loi 404
+Write-Output "Dang bat dau chay..."
+Get-Content .\logs\server.log | Select-String "404" > .\reports\daily_report.txt
+Phần 5 – Viết, chạy và thẩm định Script AI
+(a) Chạy script: .\scripts\auto_report.ps1
+(b) Kiểm tra file: Get-Content .\reports\daily_report.txt
+(a) Dòng nguy hiểm: Remove-Item -Recurse -Force C:\* (Xóa sạch toàn bộ ổ đĩa hệ thống).
+(b) Sửa an toàn: Remove-Item -Recurse -Force .\temp\*
+
+
