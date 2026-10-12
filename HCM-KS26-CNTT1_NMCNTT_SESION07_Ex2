@@ -1,0 +1,8 @@
+Phần 1: Phân tích
+Sự nhầm lẫn của An: An nhầm lẫn giữa việc tìm kiếm đối tượng tệp tin (metadata/tên file trên hệ thống ổ cứng) với việc tìm kiếm dữ liệu cấu trúc bên trong (nội dung text bên trong file log).
+Phân biệt Get-ChildItem và Select-String:
+Get-ChildItem (tương đương dir hoặc ls): Dùng để liệt kê, tìm kiếm tên tệp, thư mục và đường dẫn trên hệ thống. Lệnh này không đọc nội dung bên trong file.
+Select-String (tương đương grep hoặc findstr): Dùng để quét, tìm kiếm từ khóa hoặc mẫu chuỗi văn bản bên trong nội dung của tệp tin.
+Phần 2: Hoàn thiện
+Câu lệnh chuẩn trên PowerShell để lọc từ khóa error (mặc định không phân biệt hoa/thường và tự động hiển thị kèm số thứ tự dòng):
+Select-String -Path access.log -Pattern "error"
