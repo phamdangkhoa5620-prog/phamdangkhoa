@@ -1,0 +1,7 @@
+Phần 1: Phân tích lỗiDòng lệnh gây lỗi: Cả 3 dòng sử dụng | Out-File weekly_errors.txt (mặc định ghi đè hoàn toàn).Kết quả: File chỉ còn lại duy nhất dòng kết thúc (--- Ket thuc quet ---) của lần chạy cuối, toàn bộ lịch sử trước đó bị xóa.Phần 2: Sửa lỗi và kiểm thử1. Script đã sửaPowerShell"[$(Get-Date)] --- Bat dau quet ---" | Out-File weekly_errors.txt -Append
+Select-String -Path app.log -Pattern "error" | Out-File weekly_errors.txt -Append
+"[$(Get-Date)] --- Ket thuc quet ---" | Out-File weekly_errors.txt -Append
+2. So sánh
+Tiêu chí              Out-File (Mặc định)                    Out-File -Append / Add-Content
+Hành vi               Xóa nội dung cũ, ghi đè mới.           Giữ nội dung cũ, nối tiếp dữ liệu mới.
+Ứng dụng              Tạo file mới / reset dữ liệu.          Ghi nhật ký (Log) hệ thống 24/7.
