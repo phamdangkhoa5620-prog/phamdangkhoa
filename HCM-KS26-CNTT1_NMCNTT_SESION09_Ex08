@@ -1,0 +1,26 @@
+Phần 1: Điền khuyết
+1. khoảng trắng ( ) — Đảm bảo tách biệt giữa dấu # và emoji/tiêu đề.
+2. ```bash — mở khối mã Bash.
+3. ```  —  đóng khối mã.
+4, 5, 6. -  —  bắt đầu mỗi dòng Task List.
+7, 8 , 9 ---  — phân cách các cột trong bảng Markdown.
+Phần 2 : Hoàn thiện
+# 📅 Ứng dụng Quản lý Lịch Học Cá nhân
+Ứng dụng giúp sinh viên **lên kế hoạch học tập** hiệu quả.
+## 🚀 Hướng dẫn Cài đặt
+```bash
+git clone https://github.com/nhom5/lich-hoc-app
+cd lich-hoc-app
+```
+## ✅ Tính năng đã hoàn thành
+- [x] Đăng ký / Đăng nhập tài khoản
+- [ ] Nhắc nhở lịch học qua email
+- [x] Xuất lịch ra file PDF
+## 📊 Bảng So sánh Công nghệ
+| Công nghệ | Mục đích | Phiên bản |
+| --- | --- | --- |
+| Python | Backend xử lý dữ liệu | 3.11 |
+| Markdown | Viết tài liệu README | - |
+Bẫy dữ liệu
+Nếu xóa dòng phân cách bảng (| --- | --- | --- |), bảng sẽ không được render đúng thành bảng Markdown mà thường hiển thị như văn bản thông thường.
+Lý do: Markdown cần dòng phân cách giữa tiêu đề cột và dữ liệu để nhận diện cấu trúc bảng.
