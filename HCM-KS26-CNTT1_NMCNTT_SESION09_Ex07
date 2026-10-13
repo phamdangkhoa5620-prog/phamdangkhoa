@@ -1,0 +1,28 @@
+Phần 1: Phân tích lỗi
+Liệt kê lỗi:
+Dòng tiêu đề dư 1 dấu #
+Các mục danh sách (Bước 1 đến 4): Thiếu dấu cách sau dấu gạch ngang (-).
+Link GitHub: Thiếu tiền tố https:// (chỉ ghi github.com).
+Thẻ in đậm/nghiêng:
+Bước 2 mở ** nhưng không đóng kết câu.
+Bước 4 mở * nhưng không đóng kết câu.
+Dòng quote cuối dùng sai cú pháp định dạng (dính hỗn hợp * và **).
+Hậu quả khi render:
+Tiêu đề phụ: Hiển thị thành văn bản thường (chữ nhỏ) thay vì Heading cấp 3.
+Danh sách: Hiển thị thành các dòng chữ liền nhau thay vì danh sách gạch đầu dòng.
+Đường dẫn (github.com): Trình duyệt hiểu nhầm là Relative URL (đường dẫn nội bộ), dẫn tới lỗi 404 khi người dùng click vào.
+Thẻ định dạng: Lỗi cú pháp làm văn bản bị tràn hiệu ứng hoặc hiển thị nguyên các ký tự * thô ra màn hình.
+Phần 2: Sửa lỗi
+3. Mã nguồn Markdown hoàn chỉnh
+# Hướng Dẫn Nộp Bài Tập - Session 08
+## Lưu ý quan trọng
+Các bước nộp bài:
+- Bước 1: Tạo tài khoản GitHub tại [GitHub](https://github.com)
+- Bước 2: Tạo repository mới đặt tên theo định dạng **HNKS25CNTT1_IT101_Session08**
+- Bước 3: Upload file .md của bài làm lên repository
+- Bước 4: Copy đường dẫn và nộp lên *Portal*
+> Deadline: Chủ nhật 23:59 — ***Nộp muộn sẽ bị trừ 50% điểm!***
+4. Bẫy dữ liệu về link thiếu https://
+Nếu quên gõ https://, trình duyệt sẽ coi đây là đường dẫn tương đối dựa theo tên miền hiện tại của trang web
+(ví dụ: [https://lms-student.rikkei.edu.vn/github.com](https://lms-student.rikkei.edu.vn/github.com)) 
+và gây lỗi không truy cập được.
