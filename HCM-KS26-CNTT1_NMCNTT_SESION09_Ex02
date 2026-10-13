@@ -1,0 +1,12 @@
+Phần 1 : Phân tích lỗi 
+1. Lỗi cuốn pháp hình ảnh (thừa khoảng trắng và thiếu dấu !)
+2. phá vỡ cấu trúc dữ liều vì dùng từ # xuống ### lại quay về dunhf ##
+3. im đấm không dùng **...**
+Phần 2 : Hoàn thiện
+# Tiêu đề 1
+## Giới thiệu dự án
+![Logo PTIT](https://ptit.edu.vn/logo.png)
+**Đây là đoạn văn bản in đậm.**
+## Mục tiêu
+- Quản lý sinh viên
+- Quản lý môn học
