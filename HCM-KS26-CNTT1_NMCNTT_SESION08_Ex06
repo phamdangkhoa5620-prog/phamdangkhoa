@@ -1,0 +1,35 @@
+Phần 1: Phân tích mã nguy hiểm
+powershell
+Remove-Item -Path "C:\*" -Recurse -Force
+-Path: Chỉ định toàn bộ mục trong ổ C:.
+-Recurse: Xóa cả nội dung thư mục con.
+-Force: Cố gắng xóa tệp ẩn hoặc chỉ đọc.
+Hậu quả: Mất dữ liệu, gây lỗi Windows.
+3 nguyên tắc vàng:
+Đọc hiểu mã trước khi chạy.
+Khoanh vùng đường dẫn an toàn.
+Kiểm thử trước khi xóa thật.
+Phần 2: Script safe_cleanup.ps1
+Khai báo đường dẫn
+$project = "C:\LanThongMinh"
+$logs = Join-Path $project "logs"
+Kiểm tra và di chuyển
+if (!(Test-Path "$logs\system.log")) {Write-Host "Khong tim thay system.log!"exit}
+Set-Location $logs
+Lộc WARNING
+Select-String ".\system.log" -Pattern "WARNING" |
+    ForEach-Object { $_.Line } |
+    Set-Content ".\issues.txt"
+Xóa file .tmp (mo phong truoc)
+Get-ChildItem $project -Filter "*.tmp" -File |
+    Remove-Item -WhatIf
+Write-Host "Da tao bao cao thanh cong!"
+-WhatIf giúp kiểm tra lệnh xóa mà chưa xóa thật.
+Phần 3: Kiểm thử
+1. Xem báo cáo:
+Get-Content ".\issues.txt"
+2. Kiểm tra tệp .tmp còn lại:
+Get-ChildItem "C:\LanThongMinh" -Filter "*.tmp" -File
+3. Xác nhận báo cáo tồn tại:
+Test-Path ".\issues.txt"
+Kết quả True nghĩa là tệp báo cáo đã tồn tại.
