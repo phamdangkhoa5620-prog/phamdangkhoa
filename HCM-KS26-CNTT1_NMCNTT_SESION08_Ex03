@@ -1,0 +1,6 @@
+Phần 1 : Phân tích 
+sơ đồ
+đọc tệp         ->   lọc từ khóa                 ->     đếm kết quả
+get-content          select-string / where-object       count
+Phần 2 : Triển khai 
+get-content path_to_file.log | select-string "TIMEOUT" | where-object {$_-notmatch "NOT TIMEOUT"}
