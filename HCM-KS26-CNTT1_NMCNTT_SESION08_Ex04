@@ -1,0 +1,13 @@
+Tiêu chí
+Toán tử ghi đè (>)                                                                                              Toán tử ghi nối tiếp (>>)
+Cơ chế hoạt động          Xóa toàn bộ nội dung cũ (hoặc tạo mới), sau đó ghi đè dữ liệu mới (Out-File).         Nối tiếp dữ liệu mới vào cuối tệp hiện hành (Out-File -Append).
+
+Rủi ro mất dữ liệu        Rất cao. Xóa vĩnh viễn toàn bộ dữ liệu lịch sử nếu chạy nhầm lệnh.                    Thấp. Bảo toàn và cộng dồn dữ liệu theo thời gian.
+
+Ngữ cảnh thực tế          Phù hợp tạo báo cáo độc lập từng ca (ví dụ: Ca sáng).                                 Phù hợp hệ thống giám sát, ghi log tự động 24/7.
+Phần 2: Giải pháp tối ưu ghi log liên tục
+Lựa chọn: Sử dụng toán tử ghi nối tiếp (>>)
+Lý do & Mã lệnh đề xuất:
+Tránh rủi ro ghi đè mất dữ liệu log trong ngày.
+Chỉ định rõ mã hóa utf8 để tránh lỗi font chữ khi mở bằng các công cụ bên ngoài 
+Get-Content server.log | Select-String "ERROR" | Add-Content -Path daily_report.txt
