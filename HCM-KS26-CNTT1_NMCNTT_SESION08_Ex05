@@ -1,0 +1,26 @@
+1. Cấu trúc gồm 4 khối
+Header: Tên script, tác giả, ngày tạo bằng #.
+Biến cấu hình: Khai báo đường dẫn server.log, report.txt.
+Thông báo: Dùng Write-Host hiển thị trạng thái.
+Xử lý: Dùng Get-Content, Select-String, Add-Content để lọc và ghi log.
+2. File auto_report.ps1
+Header
+Tên: auto_report.ps1
+Tác giã: Sinh vien
+Ngày tạo: 13/10/2026
+Biến cấu hình
+$duong_dan_log = "server.log"
+$bao_cao = "report.txt"
+Thông báo
+Write-Host "Dang loc log..." -ForegroundColor Yellow
+Xữ lí
+Add-Content $bao_cao "`n=== HE THONG TU DONG LOC LOG ==="
+Get-Content $duong_dan_log |
+    Select-String "404" |
+    ForEach-Object { $_.Line } |
+    Add-Content $bao_cao
+Write-Host "Da hoan tat! Kiem tra report.txt" -ForegroundColor Green
+3. Cách chạy
+Đặt auto_report.ps1 và server.log cùng thư mục, sau đó chạy:
+.\auto_report.ps1
+Kết quả: các dòng chứa 404 được ghi nối vào report.txt, kèm tiêu đề yêu cầu.
