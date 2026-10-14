@@ -1,0 +1,27 @@
+Phần 1: Phân tích & Đề xuất (Đa giải pháp)
+Đầu vào (User Input): Sinh viên năm nhất (chưa biết lập trình) yêu cầu AI giải thích khái niệm Markdown một cách cơ bản, dễ hiểu, kèm theo các ràng buộc về độ dài và ví dụ minh họa.
+Đầu ra (AI Output): Câu trả lời trực quan, đời thường, dài 100-150 từ, có ví dụ Markdown thực tế và không chứa code phức tạp.
+So sánh 2 chiến lược
+Tiêu chí          Chiến lược A          Chiến lược B
+Độ chính xác      Thấp                  Trung bình-Cao
+Token             Thấp hơn              Cao hơn chút
+Tái sử dụng       Thấp                  Cao
+Dễ học            Cực kỳ dễ             Dễ quen sau vài lần
+Khi nào dùng A? Hỏi nhanh câu hỏi đơn giản, không ràng buộc ngặt nghèo.
+Khi nào dùng B? Ôn thi, học tập chuyên ngành cần cấu trúc chặt chẽ và tuân thủ quy tắc sư phạm.
+Prompt mẫu hỏi về "Token" (Áp dụng Chiến lược B)
+Markdown
+## Bối cảnh
+Tôi là sinh viên năm 1 ngành CNTT tại PTIT, chưa có nền tảng lập trình.
+## Khái niệm cần giải thích
+Token (trong AI và học tập)
+## Yêu cầu
+- Dùng hình ảnh so sánh đời thường (ví dụ: từ vựng, mảnh ghép Lego)
+- Độ dài: 100-150 từ
+- Nêu ảnh hưởng của Token đến cách AI hiểu câu hỏi
+## Không cần
+- Thuật toán mã hóa hay toán học phức tạp
+- Code lập trình
+4. Giải đáp Bẫy dữ liệu
+Bẫy 1 (Đặt nhầm nội dung vào Bối cảnh): AI sẽ hiểu nhầm đó là mô tả người dùng thay vì lệnh điều hướng (instruction), dẫn đến việc bỏ sót hoặc không tuân thủ ràng buộc.
+Bẫy 2 (Khi nào dùng A thay vì B?): Chỉ dùng A khi tra cứu bộc phát, ngắn gọn. Với việc học tập và ôn thi chuyên sâu, Chiến lược B luôn vượt trội dù chênh lệch token là không đáng kể.
