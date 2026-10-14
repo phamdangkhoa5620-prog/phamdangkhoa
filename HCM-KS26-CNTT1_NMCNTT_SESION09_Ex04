@@ -1,0 +1,14 @@
+# Phần 1 : Phân tích
+- Ít tốn token hơn vì nó bỏ qua những dòng dir span 
+- Ít gây nhĩu khiến cấu trúc AI dễ dàng thực hiện các yêu cầu phù hợp với nhu cầu nguwoif dùng
+# Phần 2 : So sánh 
+Bảng so sánh
+
+| Tiêu chí | Markdown | HTML |
+|:---|:---|:---|
+| Cú pháp |Tối giản, gọn nhẹ	| Rườm rà, nhiều thẻ đóng/mở |
+| Số lượng Token	| Thấp (Tiết kiệm)	| Cao (Lãng phí) |
+| Tính dễ đọc	| Cực kỳ cao, trực quan	| Rối mắt, khó đọc dạng thô |
+
+## Lựa chọn 
+- Markdowm vì ít tốn token hơn , cú pháp đơn giãn phù hợp với nhiều đối tượng , tiết kiệm chi phí và dễ dàng xữ lí . 
