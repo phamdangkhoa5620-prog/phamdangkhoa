@@ -1,0 +1,10 @@
+1. Phân tích lỗi cú pháp
+Lỗi Heading: Nhảy cóc từ H1 (#) xuống H3 (###), bỏ qua H2 và thiếu khoảng trắng sau dấu #.
+Lỗi Image: Cú pháp ảnh bị thừa khoảng trắng giữa [] và () và thiếu dấu chấm than ! ở đầu.
+Lỗi Emphasis: Dùng 1 dấu sao (*) tạo chữ nghiêng thay vì 2 dấu sao (**) để in đậm.
+2. Đoạn mã hoàn thiện
+Markdown
+# Lợi ích của rau sạch
+## Danh sách các loại rau
+![Logo Dự án](https://greentech.vn/logo.png)
+**Rất quan trọng**
