@@ -1,0 +1,18 @@
+Dưới đây là phần phân tích tóm tắt và ngắn gọn nhất để bạn nộp bài:
+
+Phần 1. Phân tích bài toán
+1. Hai sai lầm trong tư duy của Nam
+Sai lầm 1 (Dùng file nhị phân cho mã nguồn): File .docx thực chất là định dạng nén chứa cấu trúc XML phức tạp. Git không thể đọc hay so sánh nội dung bên trong nên khi thay đổi dù chỉ một dấu phẩy, hệ thống sẽ báo lỗi xung đột (Conflict) toàn bộ file.
+
+Sai lầm 2 (Dùng định dạng đóng trên GitHub): GitHub không thể tự động render và hiển thị trực quan file Word trên trình duyệt web cho các thành viên trong nhóm xem trực tiếp.
+
+2. Tại sao Markdown an toàn và nhẹ hơn?
+Hỗ trợ Git Diff hiệu quả: Markdown là văn bản thô (Plain Text), giúp Git so sánh từng dòng lệnh (line-by-line). Khi có xung đột, Git chỉ báo lỗi ở đúng dòng thay đổi thay vì làm hỏng toàn bộ file.
+
+Khả năng chống chịu lỗi dữ liệu (Robustness):
+
+Với file .docx: Mất/lỗi 1 byte dữ liệu sẽ làm hỏng cấu trúc tệp nén và mất toàn bộ nội dung.
+
+Với file .md: Do là text thuần túy, nếu gặp lỗi ở một vị trí, các phần văn bản còn lại vẫn đọc được bình thường.
+
+Dung lượng nhẹ và hiển thị trực quan: Cực kỳ tối ưu, được GitHub hỗ trợ hiển thị đẹp mắt ngay trên giao diện trình duyệt.
