@@ -1,0 +1,10 @@
+Phần 1. Phân tích
+Lỗi định dạng: Nam chỉ chỉnh cỡ chữ, in đậm mà không dùng Heading Styles nên Word không nhận diện được tiêu đề để tạo mục lục tự động.
+Lỗi gán nhãn: Gán Heading 1 cho đoạn văn dài 5 trang khiến toàn bộ đoạn có thể xuất hiện trong mục lục.
+Phần 2. Sửa lỗi
+Gán Heading 1 cho “1. Giới thiệu” và “2. Yêu cầu chức năng”.
+( Chọn dòng “1. Giới thiệu”, vào Home → Styles → Heading 1 )
+Gán Heading 2 cho các mục con, Heading 3 cho mục nhỏ hơn.
+Chuyển đoạn văn dài 5 trang về Normal.
+Vào References → Table of Contents → Automatic Table để chèn mục lục.
+Khi thêm nội dung, nhấp mục lục → Update Table → Update entire table để cập nhật tiêu đề và số trang.
