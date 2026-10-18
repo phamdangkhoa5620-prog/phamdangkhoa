@@ -1,0 +1,21 @@
+Phần 1. Phân tích lỗi
+1. Các lỗi vi phạm quy tắc vàng Database:
+- A1:E1: Tiêu đề bảng nằm trong vùng dữ liệu, vi phạm quy tắc 1.
+- Ô B3: Tên “Trần Thị Bình” có khoảng trắng cuối, vi phạm quy tắc 3 vì dữ liệu không nhất quán.
+- Hàng 4: Có hàng trống xen giữa dữ liệu, vi phạm quy tắc 4.
+- Hàng 4: Ghi “TỔNG SỐ CNTT: 45” trong bảng dữ liệu, vi phạm quy tắc 5.
+2. Vì sao khoảng trắng khiến Filter không khớp?
+“Trần Thị Bình” và “Trần Thị Bình ” là hai chuỗi ký tự khác nhau do có khoảng trắng cuối. Vì vậy, Filter có thể nhận diện thành hai giá trị riêng biệt.
+Phần 2. Sửa lỗi và nghiệm thu
+3. Cấu trúc bảng đúng chuẩn:
+- Hàng 1 là tiêu đề cột: STT, Họ và Tên, Khoa/Viện, Điểm Xét Duyệt, Trạng Thái.
+- Từ hàng 2 trở đi, mỗi hàng chứa thông tin một báo cáo viên.
+- Xóa hàng trống xen giữa dữ liệu.
+- Chuyển dòng tổng số CNTT ra ngoài bảng.
+- Không gộp ô trong vùng dữ liệu.
+4. Làm sạch và lọc dữ liệu:
+- Nhập công thức tại ô phụ F3: =TRIM(B3), rồi kéo xuống toàn bộ danh sách.
+- Sao chép kết quả và dán dạng Values vào cột Họ và Tên.
+- Chọn toàn bộ bảng, nhấn Ctrl + Shift + L để bật Filter.
+- Lọc cột Khoa/Viện chọn CNTT.
+- Lọc cột Điểm Xét Duyệt chọn Greater than or equal to 8.0.
