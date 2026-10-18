@@ -1,0 +1,11 @@
+Phần 1. Phân tích
+Bảng tính vi phạm 4 quy tắc vàng:
+1. Không gộp ô (Merge Cell): Gây lỗi khi lọc và sắp xếp.
+2. Không để hàng trống: Khiến Filter không áp dụng toàn bộ bảng.
+3. Dữ liệu phải nhất quán: “Hỏng” và “Hỏng ” bị nhận diện thành hai nhóm.
+4. Mỗi cột có tiêu đề rõ ràng: Giúp quản lý và xử lý dữ liệu chính xác.
+Phần 2. Hoàn thiện
+1. Gỡ gộp ô: Home → Merge & Center → Unmerge Cells.
+2. Xóa hàng trống: Nhấp phải vào số hàng → Delete.
+3. Làm sạch dữ liệu: Dùng công thức =TRIM(E2), kéo xuống toàn cột rồi sao chép và dán giá trị.
+4. Bật Filter: Chọn bảng và nhấn Ctrl + Shift + L.
