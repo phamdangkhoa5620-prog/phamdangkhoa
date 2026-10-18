@@ -1,0 +1,27 @@
+Phần 1. Phân tích lỗi
+Word chỉ nhận diện tiêu đề dựa trên cấu trúc Heading, không phải hình thức chữ in đậm, tô màu hay cỡ chữ.
+Tiêu đề	Cấp đúng
+1. Thông tin chung hội nghị	Heading 1
+1.1. Tên hội nghị	Heading 2
+1.2. Thời gian & địa điểm	Heading 2
+2. Cơ cấu ban tổ chức	Heading 1
+2.1. Ban Nội dung	Heading 2
+2.1.1. Tiểu ban Kỹ thuật	Heading 3
+3. Lịch trình sự kiện	Heading 1
+2. Vì sao nhầm cấp Heading làm mục lục sai?
+Heading 1 là cấp chương, Heading 2 là mục con, Heading 3 là chi tiết nhỏ hơn. Gán sai cấp sẽ khiến mục lục thụt đầu dòng sai, thể hiện sai quan hệ giữa các phần.
+Phần 2. Sửa lỗi và nghiệm thu
+3. Các bước sửa Heading
+- Chọn từng dòng tiêu đề và gán đúng cấp bằng phím tắt:
+  - Ctrl + Alt + 1: Heading 1.
+  - Ctrl + Alt + 2: Heading 2.
+  - Ctrl + Alt + 3: Heading 3.
+- Thực hiện lần lượt cho cả 7 tiêu đề theo bảng trên.
+- Đặt con trỏ tại trang đầu, chọn References → Table of Contents → Automatic Table để chèn mục lục tự động.
+4. Cập nhật số trang
+Không. Mục lục có thể vẫn hiển thị số trang cũ sau khi nội dung thay đổi.
+Cách cập nhật:
+1. Nhấp chuột phải vào mục lục.
+2. Chọn Update Field → Update entire table để cập nhật cả tiêu đề và số trang.
+Phím tắt cập nhật trường: F9 (chọn mục lục trước khi nhấn).
+Kết quả: Mục lục hiển thị đủ 3 cấp Heading và số trang chính xác theo nội dung mới.
