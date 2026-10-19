@@ -1,0 +1,22 @@
+Phần 1. Phân tích 4 tham số của VLOOKUP
+Hàm VLOOKUP dùng để tìm mã linh kiện trong bảng Danh_Muc, sau đó tự động trả về tên linh kiện hoặc đơn giá tương ứng trong bảng Don_Hang.
+Cú pháp:
+=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+- lookup_value – Giá trị cần tìm: Mã linh kiện trong sheet Don_Hang, ví dụ ô A2 chứa mã LK01.
+- table_array – Bảng tra cứu: Vùng dữ liệu chứa mã linh kiện, tên linh kiện và đơn giá trong sheet Danh_Muc. Cần dùng dấu $ để cố định vùng dữ liệu khi kéo công thức xuống.
+- col_index_num – Số thứ tự cột trả về: Nếu bảng tra có cột 1 là mã, cột 2 là tên và cột 3 là đơn giá thì nhập 2 để lấy tên hoặc 3 để lấy đơn giá.
+- range_lookup – Chế độ tìm kiếm: Nhập FALSE để tìm kiếm chính xác mã linh kiện, tránh trả về kết quả gần đúng.
+Phần 2. Triển khai công thức
+Giả sử sheet Danh_Muc có cấu trúc:
+- Cột A: Mã linh kiện.
+- Cột B: Tên linh kiện.
+- Cột C: Đơn giá.
+Sheet Don_Hang có mã linh kiện tại ô A2.
+1. Công thức lấy tên linh kiện
+=IFERROR(VLOOKUP(A2,Danh_Muc!$A$2:$C$101,2,FALSE),"Không tìm thấy mã")
+2. Công thức lấy đơn giá
+=IFERROR(VLOOKUP(A2,Danh_Muc!$A$2:$C$101,3,FALSE),"Không tìm thấy mã")
+Sau khi nhập công thức, kéo xuống các dòng còn lại để tự động tra cứu 100 mã linh kiện.
+Xử lý hai bẫy dữ liệu
+- Bẫy 1 – Quên dấu $: Sử dụng Danh_Muc!$A$2:$C$101 để cố định vùng tra cứu, tránh vùng dữ liệu bị dịch chuyển khi kéo công thức.
+- Bẫy 2 – Mã có khoảng trắng thừa: Nếu mã trong bảng danh mục có khoảng trắng đầu hoặc cuối, có thể tạo cột phụ để làm sạch bằng TRIM, ví dụ =TRIM(A2), rồi tra cứu trên cột mã đã làm sạch. Nếu mã ở cả hai sheet đều có khoảng trắng, cần làm sạch cả hai phía để đảm bảo khớp chính xác.
